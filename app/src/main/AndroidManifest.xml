@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SocialTimeBank">
         <activity
+            android:name=".profile"
+            android:exported="false" />
+        <activity
             android:name=".WelcomeActivity"
             android:exported="false" />
         <activity

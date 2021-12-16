@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">SocialTimeBank</string>
+<string-array name="language">
+    <item>עברית</item>
+    <item>English</item>
+    <item>عربيه</item>
+    <item>français</item>
+    <item>русский</item>
+    <item>español</item>
+    <item>አማርኛ</item>
+    </string-array>
 </resources>
