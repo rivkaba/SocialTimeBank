@@ -7,15 +7,30 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.AdapterView.OnItemSelectedListener;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class profile extends AppCompatActivity {
 
+    private Button save;
+    private EditText name;
+    private EditText lastName;
+    private EditText passWord;
+    private EditText district;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+        save = (Button) findViewById(R.id.save);
+        name = (EditText) findViewById(R.id.Name);
+      lastName = (EditText) findViewById(R.id.LastName);
+        passWord = (EditText) findViewById(R.id.Password);
+        district = (EditText) findViewById(R.id.district);
 
         Spinner staticSpinner = (Spinner) findViewById(R.id.static_spinner);
 
@@ -52,5 +67,14 @@ public class profile extends AppCompatActivity {
                 // TODO Auto-generated method stub
             }
         });
+    }
+    public void save(View view)
+    {
+        // Write a message to the database
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("user");
+       User user= new User(name.getText().toString(),lastName.getText().toString(),passWord.getText().toString(),district.getText().toString());
+       //
+        myRef.setValue(user);
     }
 }

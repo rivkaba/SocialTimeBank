@@ -49,7 +49,7 @@
                 android:textSize="25dp" />
 
             <EditText
-                android:id="@+id/editTextTextPassword"
+                android:id="@+id/Password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -57,7 +57,7 @@
                 android:hint="סיסמה"
                 android:textSize="25dp" />
             <EditText
-                android:id="@+id/Machoze"
+                android:id="@+id/district"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -70,14 +70,23 @@
                 android:id="@+id/static_spinner"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:textSize="25dp"
                 android:layout_marginBottom="20dp"
                 android:layout_marginTop="20dp" />
 
             <Spinner
                 android:id="@+id/dynamic_spinner"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textSize="25dp"/>
 
+            <Button
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#EADFDF"
+                android:onClick="save"
+                android:text="שמור פרופיל" />
 
 
         </LinearLayout>
