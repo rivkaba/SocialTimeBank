@@ -6,46 +6,50 @@
     android:layout_height="match_parent"
     tools:context=".profile">
 
-    <ImageView
-        android:id="@+id/imageView"
+    <ImageButton
+        android:id="@+id/imageProfile"
         android:layout_width="179dp"
         android:layout_height="141dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/profilee"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="398dp"
         android:layout_height="503dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        app:layout_constraintTop_toBottomOf="@+id/imageProfile">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <EditText
                 android:id="@+id/Name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
                 android:backgroundTint="#FFFFFF"
+                android:ems="10"
                 android:hint="שם פרטי"
+                android:inputType="textPersonName"
                 android:textSize="25dp" />
+
             <EditText
                 android:id="@+id/LastName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
                 android:backgroundTint="#FFFFFF"
+                android:ems="10"
                 android:hint="שם משפחה"
+                android:inputType="textPersonName"
                 android:textSize="25dp" />
 
             <EditText
@@ -53,32 +57,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPassword"
                 android:hint="סיסמה"
+                android:inputType="textPassword"
                 android:textSize="25dp" />
+
             <EditText
                 android:id="@+id/district"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
                 android:backgroundTint="#FFFFFF"
+                android:ems="10"
                 android:hint="מחוז"
+                android:inputType="textPersonName"
                 android:textSize="25dp" />
 
             <Spinner
                 android:id="@+id/static_spinner"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:layout_marginTop="20dp" />
+                android:textSize="25dp" />
 
             <Spinner
                 android:id="@+id/dynamic_spinner"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25dp"/>
+                android:textSize="25dp" />
 
             <Button
                 android:id="@+id/save"

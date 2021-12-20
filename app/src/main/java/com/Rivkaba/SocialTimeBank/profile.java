@@ -72,9 +72,9 @@ public class profile extends AppCompatActivity {
     {
         // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("user");
+        DatabaseReference myRef = database.getReference("users");
        User user= new User(name.getText().toString(),lastName.getText().toString(),passWord.getText().toString(),district.getText().toString());
-       //
+      //  FirebaseAuth.getInstance().getUid();
         myRef.setValue(user);
     }
 }
